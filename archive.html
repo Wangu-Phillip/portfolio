@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wangu Phillip</title>
+    <meta name="description" content="Complete project archive of Wangu Phillip, Full-Stack Developer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Space Grotesk', 'sans-serif'],
+                        'mono': ['Space Mono', 'monospace'],
+                    },
+                    colors: {
+                        'primary': '#FF4D4D',
+                        'secondary': '#00F0FF',
+                        'dark': '#0A0A0A',
+                        'light': '#FAFAFA',
+                        'gray': {
+                            '800': '#1E1E1E',
+                            '700': '#2D2D2D',
+                            '600': '#3D3D3D',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        ::selection {
+            background: rgba(255, 77, 77, 0.3);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #FF4D4D, #00F0FF, #FF4D4D);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: text-gradient 8s ease infinite;
+        }
+        
+        @keyframes text-gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .archive-item {
+            transition: all 0.3s ease;
+        }
+        
+        .archive-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        
+        .vertical-email {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            letter-spacing: 0.1em;
+            transform: rotate(180deg);
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .vertical-email:hover {
+            color: #00F0FF;
+            transform: rotate(180deg) translateY(-3px);
+        }
+        
+        .email-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a202c;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #4fd1c5;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38b2ac;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-dark/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="gradient-text">waphil</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="index.html#about" class="text-gray-400 hover:text-light transition-all duration-300 relative group">
+                        <span class="relative">
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            About
+                        </span>
+                    </a>
+                    <a href="index.html#experience" class="text-gray-400 hover:text-light transition-all duration-300 relative group">
+                        <span class="relative">
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            Experience
+                        </span>
+                    </a>
+                    <a href="index.html#work" class="text-gray-400 hover:text-light transition-all duration-300 relative group">
+                        <span class="relative">
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            Projects
+                        </span>
+                    </a>
+                    <a href="archive.html" class="text-gray-400 hover:text-light transition-all duration-300 relative group">
+                        <span class="relative">
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            Archive
+                        </span>
+                    </a>
+                    <a href="index.html#contact" class="text-gray-400 hover:text-light transition-all duration-300 relative group">
+                        <span class="relative">
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            Contact
+                        </span>
+                    </a>
+                    <a href="wangu_phillip_resume.pdf" download class="px-5 py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-dark font-bold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
+                        Resume
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-400 hover:text-light">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm">
+            <div class="px-6 py-4 space-y-6">
+                <a href="index.html#about" class="block text-gray-400 hover:text-light transition">About</a>
+                <a href="index.html#experience" class="block text-gray-400 hover:text-light transition">Experience</a>
+                <a href="index.html#work" class="block text-gray-400 hover:text-light transition">Projects</a>
+                <a href="archive.html" class="block text-gray-400 hover:text-light transition">Archive</a>
+                <a href="index.html#contact" class="block text-gray-400 hover:text-light transition">Contact</a>
+                <a href="wangu_phillip_resume.pdf" download class="block px-5 py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-dark font-bold text-center">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Archive Section -->
+    <section class="min-h-screen pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center mb-16">
+                <h2 class="text-3xl font-bold whitespace-nowrap">
+                    <span class="text-primary font-mono mr-4">/</span>
+                    Project Archive
+                </h2>
+                <div class="w-full h-px bg-gray-800 ml-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8">
+
+                <!-- Project 1 -->
+                <div class="archive-item group relative border border-gray-700 rounded-lg p-6 hover:border-secondary transition-all duration-300 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-light group-hover:text-secondary transition-all duration-300">
+                                Birth Certificate Registration System (BCRS)
+                            </h3>
+                            <p class="text-gray-400 text-sm mt-1">April 2025</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Laravel</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">MySQL</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Tailwindcss</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-4">
+                        A mini web-based system for Botswana citizens to register for babies birth certificates, with notifications, real-time updates and admin dashboard.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://github.com/Wangu-Phillip/BCRS" class="text-gray-400 hover:text-secondary transition-all duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://github.com/Wangu-Phillip/BCRS" class="text-gray-400 hover:text-secondary transition-all duration-300">
+                            <i class="fas fa-external-link-alt text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="archive-item group relative border border-gray-700 rounded-lg p-6 hover:border-secondary transition-all duration-300 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-light group-hover:text-secondary transition-all duration-300">
+                                Fault Reporting System
+                            </h3>
+                            <p class="text-gray-400 text-sm mt-1">March 2025</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Laravel</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">MySQL</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Tailwindcss</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-4">
+                        A web-based system for university campus residents to report maintenance issues with real-time updates and admin dashboard.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-all duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-all duration-300">
+                            <i class="fas fa-external-link-alt text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="archive-item group relative border border-gray-700 rounded-lg p-6 hover:border-secondary transition-all duration-300 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-light group-hover:text-secondary transition-all duration-300">
+                                Guest House Booking System
+                            </h3>
+                            <p class="text-gray-400 text-sm mt-1">November 2024</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">PHP</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">MySQL</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">HTML</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">CSS</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-4">
+                        Mini project for booking management with generating analytics and files functionality and real time updates.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://github.com/Wangu-Phillip/guest-house-system" class="text-gray-400 hover:text-secondary transition-all duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="archive-item group relative border border-gray-700 rounded-lg p-6 hover:border-secondary transition-all duration-300 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-light group-hover:text-secondary transition-all duration-300">
+                                Poultry Data Analytics
+                            </h3>
+                            <p class="text-gray-400 text-sm mt-1">May 2023</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Flutter</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Firebase</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Dart</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-full text-xs font-mono">Data Visualization</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-4">
+                        Mobile application for small poultry farmers to track and analyze flock data, including growth metrics and feed consumption patterns.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="https://github.com/Wangu-Phillip/HenVision" class="text-gray-400 hover:text-secondary transition-all duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <div class="flex space-x-6 mb-8">
+                    <a href="https://github.com/Wangu-Phillip" class="social-icon text-gray-400 hover:text-secondary text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/wangu-phillip/" class="social-icon text-gray-400 hover:text-secondary text-xl">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="text-gray-600 font-mono text-sm">
+                    Designed & Built by <span class="text-secondary">Wangu Phillip</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Side Elements -->
+    <div class="fixed left-8 bottom-0 hidden md:flex flex-col items-center space-y-6">
+        <div class="flex flex-col items-center space-y-6">
+            <a href="https://github.com/Wangu-Phillip" class="social-icon text-gray-400 hover:text-secondary text-xl">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/wangu-phillip/" class="social-icon text-gray-400 hover:text-secondary text-xl">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="h-24 w-px bg-gray-800"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                this.innerHTML = mobileMenu.classList.contains('hidden') ? 
+                    '<i class="fas fa-bars text-xl"></i>' : 
+                    '<i class="fas fa-times text-xl"></i>';
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                });
+            });
+            
+            // Animate elements when they come into view
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.archive-item');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.classList.add('animate-fadeIn');
+                    }
+                });
+            };
+            
+            // Run once on load
+            animateOnScroll();
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>
